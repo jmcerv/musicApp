@@ -60,7 +60,6 @@ requests==2.18.4
 shutilwhich==1.1.0
 six==1.11.0
 SQLAlchemy==1.0.12
-system-service==0.1.6
 testtools==0.9.35
 Twisted-Core==13.2.0
 Twisted-Web==13.2.0
