@@ -26,19 +26,19 @@ This app has a API Rest that allows the input of users and songs through a `POST
 
 For this i recomend the usage of [Postman](https://www.getpostman.com/).
 
-### GET (locally)
+### GET
 
 #### Users
-![Imgur](https://i.imgur.com/bNkJeRl.png)
+[Imgur](https://i.imgur.com/ptr2XAz.png)
 #### Songs
-![Imgur](https://i.imgur.com/4jTcFqZ.png)
+[Imgur](https://i.imgur.com/apg7Vu6.png)
 
-### POST (locally)
+### POST
 
 ### Users
-![Imgur](https://i.imgur.com/p6vlbm1.png)
+[Imgur](https://i.imgur.com/5ByFlfl.png)
 ### Songs
-![Imgur](https://i.imgur.com/lLFD0bl.png)
+[Imgur](https://i.imgur.com/TTyzzxo.png)
 
 The `POST` song request has this specific characteristics:
 * The `user` field is not mandatory, but if you want to conenct a user to his favorite song, you must put his `id`
