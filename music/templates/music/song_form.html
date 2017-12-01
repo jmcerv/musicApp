@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Add a New Song</h1>
+    <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% include 'music/form-template.html' %}
+        <div class="form-group">
+            <div>
+                <a href="/music/songs">
+                    <button type="submit" class="btn btn-success">Add Song</button>
+                </a>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

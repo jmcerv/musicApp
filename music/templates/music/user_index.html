@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Music List</title>
+</head>
+<body>
+
+    {% if user_list %}
+        <h1>List of Users in Database</h1>
+        <ul>
+            {% for user in user_list %}
+                <li> <a href="/music/user/{{ user.id }}/"> {{ user.username }} </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No Users in Database</p>
+    {% endif %}
+
+    <a href='{% url 'user-add' %}'>
+        Add User
+    </a>
+    <br>
+    <a href="/music">
+        Back to Home
+    </a>
+</body>
+</html>

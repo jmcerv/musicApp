@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Music List</title>
+</head>
+<body>
+
+    {% if song_list %}
+        <h1>List of Songs in Database</h1>
+        <ul>
+            {% for song in song_list %}
+                <li> <a href="/music/song/{{ song.id }}/"> {{ song.title }} </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No Songs in Database</p>
+    {% endif %}
+
+    <a href="/music/song/add/">
+        Add Song
+    </a>
+    <br>
+    <a href="/music">
+        Back to Home
+    </a>
+</body>
+</html>
