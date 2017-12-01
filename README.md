@@ -29,16 +29,16 @@ For this i recomend the usage of [Postman](https://www.getpostman.com/).
 ### GET
 
 #### Users
-[Imgur](https://i.imgur.com/ptr2XAz.png)
+![Imgur](https://i.imgur.com/ptr2XAz.png)
 #### Songs
-[Imgur](https://i.imgur.com/apg7Vu6.png)
+![Imgur](https://i.imgur.com/apg7Vu6.png)
 
 ### POST
 
 ### Users
-[Imgur](https://i.imgur.com/5ByFlfl.png)
+![Imgur](https://i.imgur.com/5ByFlfl.png)
 ### Songs
-[Imgur](https://i.imgur.com/TTyzzxo.png)
+![Imgur](https://i.imgur.com/TTyzzxo.png)
 
 The `POST` song request has this specific characteristics:
 * The `user` field is not mandatory, but if you want to conenct a user to his favorite song, you must put his `id`
