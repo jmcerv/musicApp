@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Details</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $(function() {
+      $("#songs").autocomplete({
+        source: "/ajax/get_songs/",
+        minLength: 2,
+      });
+    });
+    </script>
+</head>
+<body>
+    <!-- Show User's Favorite Songs -->
+    <h1>{{ user.username }}</h1>
+    <h3>Mail:</h3> {{ user.email }}
+    <h3>Favorite Songs:</h3>
+    <ul>
+        {% for song in user.song_set.all %}
+            <li>{{ song.title }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Add New User's Favorite Songs -->
+    <h3>Search Songs by Title</h3>
+
+    <form class="ui-widget" role="search" method="post" action="{% url 'favorite-song' user.id %}">
+      {% csrf_token %}
+      <label for="songs">Songs: </label>
+      <input id="songs" type="text" class="form-control" name="song" value="{{ song.title }}">
+      <input type="submit" value="Favorite">
+    </form>
+
+    <!-- Delete -->
+    <h3>User Option</h3>
+    <form action="{% url 'user-delete' user.id %}" method="post" style="display: inline;">
+        {% csrf_token %}
+        <input type="hidden" name="user_id" value="{{ user.id }}"/>
+        <button type="submit" class="button">
+            Delete
+        </button>
+    </form>
+    <br>
+    <br>
+    <a href="/music/users">
+        Back to User List
+    </a>
+</body>
+</html>

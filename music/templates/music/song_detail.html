@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Song Details</title>
+</head>
+<body>
+    <h1>{{ song.title }}</h1>
+    <h3>Band:</h3> {{ song.artist }}
+    <h3>Album:</h3> {{ song.album }}
+    <h3>Users:</h3>
+    <ul>
+        {% for user in song.user.all %}
+            <li>{{ user.username }}</li>
+        {% endfor %}
+    </ul>
+    <!-- Delete -->
+    <form action="{% url 'song-delete' song.id %}" method="post" style="display: inline;">
+        {% csrf_token %}
+        <input type="hidden" name="song_id" value="{{ song.id }}"/>
+        <button type="submit" class="button">
+            Delete
+        </button>
+    </form>
+    <a href="/music/songs">
+        Back to Song List
+    </a>
+</body>
+</html>
