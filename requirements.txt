@@ -61,7 +61,6 @@ shutilwhich==1.1.0
 six==1.11.0
 SQLAlchemy==1.0.12
 testtools==0.9.35
-Twisted-Web==13.2.0
 urllib3==1.22
 virtualenv==14.0.6
 virtualenv-clone==0.2.6
