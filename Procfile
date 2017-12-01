@@ -1,1 +1,1 @@
-web: python run.py
+web: gunicorn musicApp.wsgi --log-file -
