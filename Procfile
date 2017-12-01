@@ -1,1 +1,1 @@
-web: gunicorn musicApp:app --preload
+web: gunicorn gettingstarted.wsgi --log-file -
