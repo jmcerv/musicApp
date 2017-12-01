@@ -24,9 +24,9 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     # REST Api
-    url(r'^api/songs/', views.SongList.as_view()),
-    url(r'^api/users/', views.UserList.as_view()),
-    url(r'^ajax/get_songs/', views.get_songs, name='get_drugs'),
+    url(r'^api/songs/', views.SongList.as_view(), name='get-songs'),
+    url(r'^api/users/', views.UserList.as_view(), name='get-users'),
+    url(r'^ajax/get_songs/', views.get_songs, name='get-ajax-songs'),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
