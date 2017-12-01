@@ -31,7 +31,6 @@ MarkupSafe==0.23
 mccabe==0.6.1
 mox3==0.7.0
 oauthlib==0.6.1
-oneconf==0.3.7.14.4.1
 PAM==0.4.2
 passlib==1.6.5
 pathlib==1.0.1
