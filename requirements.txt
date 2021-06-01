@@ -59,7 +59,7 @@ shutilwhich==1.1.0
 six==1.11.0
 SQLAlchemy==1.0.12
 testtools==0.9.35
-urllib3==1.22
+urllib3==1.26.5
 virtualenv==14.0.6
 virtualenv-clone==0.2.6
 Werkzeug==0.11.4
